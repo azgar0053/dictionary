@@ -13,7 +13,8 @@ const words = [
 
 function App() {
   const [input, setInput] = useState('');
-  const [meaning, setMeaning] = useState('')
+  const [meaning, setMeaning] = useState('');
+  const [dictionary, setDictionary]= useState(words)
 
   const handleChange=(e)=>{
     setInput(e.target.value)
@@ -23,7 +24,7 @@ function App() {
   }
 
 const handleSearch=()=>{
-  const foundWord = words.find((w)=>w.word.toLowerCase()==input.toLowerCase());
+  const foundWord = dictionary.find((w)=>w.word.toLowerCase()==input.toLowerCase());
 
 
   if(foundWord){
