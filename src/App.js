@@ -38,7 +38,7 @@ const handleSearch=()=>{
       <h1>Dictionary App</h1>
       <input type='text' value={input} onChange={handleChange} required/>
       <button onClick={handleSearch}>Search</button>
-      <p><strong>Definition:</strong> {meaning}</p>
+      <div style={{display:'flex', justifyContent:'center'}}><p><strong>Definition:</strong></p><p>{meaning}</p></div>
     </div>
   );
 }
