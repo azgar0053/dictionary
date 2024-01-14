@@ -24,7 +24,7 @@ function App() {
   }
 
 const handleSearch=()=>{
-  const foundWord = dictionary.find((w)=>w.word.toLowerCase()==input.toLowerCase());
+  const foundWord = dictionary.find((w)=>w.word.toLowerCase()===input.toLowerCase());
 
 
   if(foundWord){
@@ -38,7 +38,8 @@ const handleSearch=()=>{
       <h1>Dictionary App</h1>
       <input type='text' value={input} onChange={handleChange} required/>
       <button onClick={handleSearch}>Search</button>
-      <p>Definition: {meaning}</p>
+      <p>Definition:</p>
+      <p>{meaning}</p>
     </div>
   );
 }
